@@ -1,0 +1,8 @@
+<h2>Desayuno</h2>
+<ul class="menu">
+  <li *ngFor="let waiter of menu" 
+  [class.selected]="waiter === selectedBreakfast"
+  (click)="onSelect(waiter)">
+    <span class="badge">{{waiter.id}}</span>{{waiter.name}}
+  </li>
+</ul>
