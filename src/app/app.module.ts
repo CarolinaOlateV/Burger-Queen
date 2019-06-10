@@ -2,20 +2,39 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // <-- NgModel está aquí
 import { AppRoutingModule } from './app-routing.module';
+
+// Rutas
+import { APP_ROUTING } from './app.routes';
+
+
+// Servicios
+import { WaiterService } from './servicios/waiter.service';
+
+
+// Componentes
 import { AppComponent } from './app.component';
-import { WaiterComponent } from './waiter/waiter.component';
+import { NavbarComponent } from './components/shared/navbar/navbar.component';
+import { HomeComponent } from './components/home/home.component';
+import { WaiterComponent } from './components/waiter/waiter.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    NavbarComponent,
+    HomeComponent,
     WaiterComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    APP_ROUTING
   ],
-  providers: [],
+  providers: [
+    WaiterService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

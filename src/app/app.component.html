@@ -1,18 +1,8 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<body>
-  <div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="200" alt="logo burger queen" src="assets/img/Logo final th_THEBU_QUEEN.png">
-</div>
-<h2>{{ clientName.name | uppercase }}</h2>
-<div><span>id: </span>{{clientName.id}}</div>
-<div>
-  <label>Nombre: 
-    <input [(ngModel)]="clientName.name" placeholder="name">
-  </label>
-</div>
-</body>
+<app-navbar></app-navbar>
+
+<div class="container main-cointainer">
+
 <router-outlet></router-outlet>
-<app-waiter></app-waiter>
+
+</div>

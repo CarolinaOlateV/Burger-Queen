@@ -1,23 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { Appear } from './clientName';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
-  title = 'Burger-queen';
-
-  clientName: Appear = {
-  id: 1,
-  name: 'Ingresar nombre de cliente'
+export class AppComponent {
+  title = 'my-app';
 }
-
-  constructor() { }
- 
-  ngOnInit() {
-  }
- 
-}
-
