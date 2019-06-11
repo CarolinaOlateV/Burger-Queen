@@ -16,6 +16,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { WaiterComponent } from './components/waiter/waiter.component';
+import { BreakfastComponent } from './components/breakfast/breakfast.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { WaiterComponent } from './components/waiter/waiter.component';
     NavbarComponent,
     HomeComponent,
     WaiterComponent,
+    BreakfastComponent,
 
   ],
   imports: [
