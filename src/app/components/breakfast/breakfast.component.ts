@@ -7,12 +7,33 @@ import { WaiterService } from '../../servicios/waiter.service';
   styleUrls: ['./breakfast.component.css']
 })
 export class BreakfastComponent implements OnInit {
-  breakfast:any[] = []
+  private breakfast:any[] = [];
+  public menuToShow:any[]=[];
 
-  constructor(private _waiterServices:WaiterService) { }
+  public filterBy:string='Lunch';
+
+  constructor(private _waiterServices:WaiterService) { 
+
+  }
 
   ngOnInit() {
     this.breakfast = this._waiterServices.getBreakfast();
+    this.updateMenuToShow();
+    // console.log(this.breakfast);
+  }
+
+  updateMenuToShow(): void {
+    this.menuToShow = this.breakfast.filter(item => item.Type == this.filterBy);
+  }
+
+  handleBreakfastClick(){
+    this.filterBy = 'Breakfast';
+    this.updateMenuToShow()
+  }
+
+  handleLunchClick(){
+    this.filterBy = 'Lunch';
+    this.updateMenuToShow()
   }
 
 }

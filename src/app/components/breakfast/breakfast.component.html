@@ -1,7 +1,8 @@
 <h1 class="animated fadeIn">Ingresa tu pedido</h1>
-<button type="button" class="btn btn-danger" >Desayuno</button>
-<button type="button" class="btn btn-danger">Almuerzo</button><br>
-<div class="btn-group" *ngFor="let waiterItem of breakfast">
+<hr>
+   <button class="btn btn-outline-danger" (click)="handleBreakfastClick()">Desayuno</button><br><button class="btn btn-outline-danger" (click)="handleLunchClick()">Almuerzos</button>
+   <hr>
+<div class="btn-group" *ngFor="let waiterItem of menuToShow">
     <button type="button" class="btn btn-warning">{{ waiterItem.name }} <br> {{ waiterItem.price }}</button>
 
   </div>
