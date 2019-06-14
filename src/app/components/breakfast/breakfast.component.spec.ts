@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { WaiterService } from '../../servicios/waiter.service';
 
 import { BreakfastComponent } from './breakfast.component';
 
@@ -8,7 +9,8 @@ describe('BreakfastComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BreakfastComponent ]
+      declarations: [ BreakfastComponent ],
+      providers: [WaiterService]
     })
     .compileComponents();
   }));
